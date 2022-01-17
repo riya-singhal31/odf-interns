@@ -39,28 +39,28 @@ func main() {
 	var slice8 = make([]int, 5)
 	fmt.Printf("Slice: %v, Length of slice: %d, Capacity of slice: %d\n", slice8, len(slice8), cap(slice8))
 
-	//iteration
+	// iteration
 	for ele := 0; ele < len(slice2); ele++ {
 		fmt.Print(slice2[ele], " ")
 	}
 	fmt.Print("\n")
 
-	//range in for loop
+	// range in for loop
 	for index, element := range slice {
 		fmt.Printf("Index: %d, element: %d\n", index, element)
 	}
 
-	//Blank identifier: if we don't want index in range for loop, we can use "_" in place of index
+	// Blank identifier: if we don't want index in range for loop, we can use "_" in place of index
 	for _, element := range slice {
 		fmt.Printf("element: %d\n", element)
 	}
 
-	//Creating empty slice or zero value slice (capacity = 0, length = 0)
-	//Nil slice does not contain an array reference
+	// Creating empty slice or zero value slice (capacity = 0, length = 0)
+	// Nil slice does not contain an array reference
 	var nilSlice []int
 	fmt.Printf("Slice: %v, length: %d, Capacity: %d", nilSlice, len(nilSlice), cap(nilSlice))
 
-	//Slice is referencing array, so if we modify slice then array should also get modified.
+	// Slice is referencing array, so if we modify slice then array should also get modified.
 	fmt.Printf("Original array: %v", arr)
 	fmt.Println()
 	fmt.Printf("Original slice: %v", slice1)
@@ -74,11 +74,10 @@ func main() {
 	fmt.Printf("New slice: %v", slice1)
 	fmt.Println()
 
-	//== operator in slice
+	// operator(==) in slice
 	fmt.Println(nilSlice == nil)
 
-	//sorting in slice
-	sort.Ints(slice1) //import sort library for this
-	fmt.Println(slice1)
-
+	// sorting in slice
+	sort.Ints(slice1) // import sort library for this
+	fmt.Print(slice1)
 }
